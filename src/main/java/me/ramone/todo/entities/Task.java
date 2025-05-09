@@ -27,7 +27,7 @@ public class Task {
     @Column(name = "due_date")
     private LocalDate dueDate;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.REMOVE)
     @JoinColumn(name = "user_id")
     private User user;
 
